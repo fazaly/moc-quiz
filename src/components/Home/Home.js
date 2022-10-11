@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Courses from '../../Courses/Courses';
+import { QuizContext } from '../Root/Root';
 
 const Home = () => {
+    const courses = useContext(QuizContext);
+
+    // const handleAddToTopics = () => {
+
+    // }
+    // console.log(courses);
     return (
         <div>
             <section className="dark:bg-gray-800 dark:text-gray-100">
@@ -19,6 +27,15 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <h1 className='pl-12 text-2xl font-bold text-gray-700 mt-5'>All Courses Quiz:</h1>
+            <div className='grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 p-12 lg:row-gap-8'>
+                {
+                    courses.data.map(course => <Courses
+                    key={course.id}
+                    course={course}
+                    ></Courses>)
+                }
+            </div>
         </div>
     );
 };
