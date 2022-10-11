@@ -6,6 +6,7 @@ export const QuizContext = createContext([]);
 
 const Root = () => {
     const courses = useLoaderData();
+
     return (
         <QuizContext.Provider value={courses}>
             <Header></Header>

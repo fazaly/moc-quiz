@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import Courses from '../../Courses/Courses';
 import { QuizContext } from '../Root/Root';
 
+
 const Home = () => {
     const courses = useContext(QuizContext);
 
-    // const handleAddToTopics = () => {
-
-    // }
+    const handleAddToTopics = (course) => {
+        // toast.success('hello', {autoClose: 500});
+    }
     // console.log(courses);
     return (
         <div>
@@ -33,6 +34,7 @@ const Home = () => {
                     courses.data.map(course => <Courses
                     key={course.id}
                     course={course}
+                    handleAddToTopics={handleAddToTopics}
                     ></Courses>)
                 }
             </div>

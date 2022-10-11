@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Courses = ({course}) => {
+const Courses = ({course, handleAddToTopics}) => {
     const {id, name, logo} = course;
     return (
         <div>
@@ -16,9 +17,12 @@ const Courses = ({course}) => {
                         <p className='text-gray-700 hover:text-emerald-500 text-[25px] font-bold'>{name}</p>
                     </div>
                     <div className="flex space-x-2 text-sm">
-                        <button type="button" className="flex items-center text-white font-bold text-[20px] bg-gray-600 hover:bg-gray-800 rounded-md p-3 space-x-1.5">
+                        <Link to={`/topics/${id}`}
+                            onClick={() => handleAddToTopics(course)}
+                            type="button" 
+                            className="flex items-center text-white font-bold text-[20px] bg-gray-600 hover:bg-gray-800 rounded-md p-3 space-x-1.5">
                             Start Practice
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
