@@ -4,12 +4,14 @@ import Topics from '../components/Topics/Topics';
 import Statistics from '../components/Statistics/Statistics';
 import Blog from '../components/Blog/Blog';
 import Root from "../components/Root/Root";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
