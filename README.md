@@ -5,7 +5,7 @@ An Learning platform for all Future  Web Developer who want's to improve their s
 
 ## Live Link
 
-Hosted in Netlify -> [MOC-QUIZ]()
+Hosted in Netlify -> [MOC-QUIZ](https://moc-quiz.netlify.app/)
 
 ## Context API
 

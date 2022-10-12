@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 
 const Courses = ({course, handleAddToTopics}) => {
     const {id, name, logo} = course;
@@ -16,12 +17,12 @@ const Courses = ({course, handleAddToTopics}) => {
                     <div className="space-x-2">
                         <p className='text-gray-700 hover:text-emerald-500 text-[25px] font-bold'>{name}</p>
                     </div>
-                    <div className="flex space-x-2 text-sm">
+                    <div className="flex items-center justify-center space-x-2 text-sm">
                         <Link to={`/topics/${id}`}
                             // onClick={() => handleAddToTopics(course)}
                             type="button" 
                             className="flex items-center text-white font-bold text-[20px] bg-gray-600 hover:bg-gray-800 rounded-md p-3 space-x-1.5">
-                            Start Practice
+                            Start Practice<p className='ml-2'><ArrowLongRightIcon className="h-8 w-6 text-white"/></p>
                         </Link>
                     </div>
                 </div>
