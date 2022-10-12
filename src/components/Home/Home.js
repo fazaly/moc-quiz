@@ -2,12 +2,11 @@ import React, { useContext } from 'react';
 import Courses from '../../Courses/Courses';
 import { QuizContext } from '../Root/Root';
 
-
 const Home = () => {
     const courses = useContext(QuizContext);
 
     const handleAddToTopics = (course) => {
-        // toast.success('hello', {autoClose: 500});
+        
     }
     // console.log(courses);
     return (

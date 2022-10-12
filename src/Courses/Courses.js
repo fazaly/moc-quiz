@@ -18,7 +18,7 @@ const Courses = ({course, handleAddToTopics}) => {
                     </div>
                     <div className="flex space-x-2 text-sm">
                         <Link to={`/topics/${id}`}
-                            onClick={() => handleAddToTopics(course)}
+                            // onClick={() => handleAddToTopics(course)}
                             type="button" 
                             className="flex items-center text-white font-bold text-[20px] bg-gray-600 hover:bg-gray-800 rounded-md p-3 space-x-1.5">
                             Start Practice
